@@ -1,5 +1,7 @@
 <?php
-class OperationTwo
+include('library/mathoperation.class.php');
+
+class Threevar extends OperationTwo
 {
     // property declaration
   public $var_1;
@@ -21,7 +23,7 @@ class OperationTwo
         return $this->var_1 + $this->var_2 + $this->var_3;
     }
 }
-$operation_two = new OperationTwo(3,3,1);
+$operation_two = new Threevar(3,3,1);
 echo "Operation Name : Operation Two";
 echo "<br>";
 echo "Number of Variables : 3";
