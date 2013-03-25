@@ -1,5 +1,7 @@
 <?php
 
+include "library/mathoperation.class.php";
+
 class TwoVariables extends OperationOne
 {
         public $var_1;
