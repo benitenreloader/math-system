@@ -34,7 +34,5 @@ echo $operation_one->multiplication();
 echo "<br>";
 echo "Division: ";
 echo $operation_one->division();
-echo "<br/>";
-echo "HELLO!";
 
 ?>
