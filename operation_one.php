@@ -21,15 +21,15 @@ class TwoVariables extends OperationOne
 	}
 }
 
-echo "Operation Name: Operation One";
+echo "<b>Operation Name: </b>Operation One";
 echo "<br>";
-echo "Number of Variables: 2";
+echo "<b>Number of Variables: </b>2";
 echo "<br>";
 $operation_one = new TwoVariables(2, 2);
-echo "Multiplication: ";
+echo "<b>Multiplication: </b>";
 echo $operation_one->multiplication();
 echo "<br>";
-echo "Division: ";
+echo "<b>Division: </b>";
 echo $operation_one->division();
 
 ?>
