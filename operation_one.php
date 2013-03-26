@@ -28,7 +28,7 @@ echo "Operation Name: Operation One";
 echo "<br>";
 echo "Number of Variables: 2";
 echo "<br>";
-$operation_one = new TwoVariables($_POST['txt1'],$_POST['txt2']));
+$operation_one = new TwoVariables(2, 2);
 echo "Multiplication: ";
 echo $operation_one->multiplication();
 echo "<br>";
