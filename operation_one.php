@@ -85,9 +85,9 @@ class TwoVariables extends OperationOne
 		return $this->var_1 / $this->var_2;
 	}
 }
-
-$var1 = $_POST['txt1'];
-$var2 = $_POST['txt2'];
+if(isset($_POST['txt1']) && isset($_POST['txt2'])){
+$var1 = (filter_var($_POST['txt1'], FILTER_SANITIZE_NUMBER_INT)); 
+$var2 = (filter_var($_POST['txt2'], FILTER_SANITIZE_NUMBER_INT));
 
 if(($var1 != "") && ($var2 != "")){
 echo "<b>Operation Name: </b>Operation One";
@@ -103,6 +103,7 @@ echo $operation_one->division();
 echo "<br/>";
 echo "HELLO!";
 echo '<div id="chart_div" style="width:400; height:300"></div>	';
+}
 }
 ?>
 
