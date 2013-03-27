@@ -1,42 +1,3 @@
-<?php
-
-include "library/mathoperation.class.php";
-
-class TwoVariables extends OperationOne
-{
-	public $var_1;
-	public $var_2;
-
-	public function __construct($var_1, $var_2) {
-		$this->var_1 = $var_1;
-		$this->var_2 = $var_2;
-	}
-
-	public function multiplication() {
-		return $this->var_1 * $this->var_2;
-	}
-
-	public function division() {
-		return $this->var_1 / $this->var_2;
-	}
-}
-
-echo "<b>Operation Name: </b>Operation One";
-echo "<br>";
-echo "<b>Number of Variables: </b>2";
-echo "<br>";
-$operation_one = new TwoVariables($_POST['txt1'],$_POST['txt2']);
-echo "<b>Multiplication: </b>";
-echo $operation_one->multiplication();
-echo "<br>";
-echo "<b>Division: </b>";
-echo $operation_one->division();
-echo "<br/>";
-echo "HELLO!";
-
-?>
-
-
 <html>
 	<head>
 	<!--Load the AJAX API-->
@@ -91,7 +52,59 @@ echo "HELLO!";
 	</script>
 </head>
 <body>
+	<form action= "" method= "POST">
+		Enter the values for operation 1: <br />
+		Variable 1:<input type='text' name='txt1' /> <br /><br />
+		Variable 2:<input type='text' name='txt2' /><br /><br />
+		<input type='submit' name='submit' value='submit'/>
+	</form>
 	<!--Div that will hold the pie chart-->
-	<div id="chart_div" style="width:400; height:300"></div>
+	
 </body>
 </html>
+
+<?php
+
+include "library/mathoperation.class.php";
+
+class TwoVariables extends OperationOne
+{
+	public $var_1;
+	public $var_2;
+
+	public function __construct($var_1, $var_2) {
+		$this->var_1 = $var_1;
+		$this->var_2 = $var_2;
+	}
+
+	public function multiplication() {
+		return $this->var_1 * $this->var_2;
+	}
+
+	public function division() {
+		return $this->var_1 / $this->var_2;
+	}
+}
+
+$var1 = $_POST['txt1'];
+$var2 = $_POST['txt2'];
+
+if(($var1 != "") && ($var2 != "")){
+echo "<b>Operation Name: </b>Operation One";
+echo "<br>";
+echo "<b>Number of Variables: </b>2";
+echo "<br>";
+$operation_one = new TwoVariables($var1,$var2);
+echo "<b>Multiplication: </b>";
+echo $operation_one->multiplication();
+echo "<br>";
+echo "<b>Division: </b>";
+echo $operation_one->division();
+echo "<br/>";
+echo "HELLO!";
+echo '<div id="chart_div" style="width:400; height:300"></div>	';
+}
+?>
+
+
+
