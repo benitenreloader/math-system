@@ -52,12 +52,6 @@
 	</script>
 </head>
 <body>
-<<<<<<< HEAD
-	<form action= "" method= "POST">
-		Enter the values for operation 1: <br />
-		Variable 1:<input type='text' name='txt1' /> <br /><br />
-		Variable 2:<input type='text' name='txt2' /><br /><br />
-=======
 <style>
 	.corner{
 	border-radius:5px;
@@ -67,7 +61,6 @@
 		Enter the values for operation 1: <br />
 		Variable 1:<input type='text' name='txt1' class='corner'/> <br /><br />
 		Variable 2:<input type='text' name='txt2' class='corner'/><br /><br />
->>>>>>> menu_corners
 		<input type='submit' name='submit' value='submit'/>
 	</form>
 	<!--Div that will hold the pie chart-->
