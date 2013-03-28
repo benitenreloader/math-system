@@ -1,7 +1,18 @@
 <html>
-	<head>
+<head>
 	<?php include('style.php'); ?>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("form").hide();
+  });
+  $("#show").click(function(){
+    $("form").show();
+  });
+});
+</script>
 </head>
 <body>
 <style>
@@ -15,8 +26,9 @@
 		Variable 2:<input type='text' name='txt2' class='corner'/><br /><br />
 		<input type='submit' name='submit' value='submit'/>
 	</form>
-	<!--Div that will hold the pie chart-->
-	
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+	<!--Div that will hold the pie chart-->	
 </body>
 </html>
 
