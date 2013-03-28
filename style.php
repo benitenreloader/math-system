@@ -8,11 +8,10 @@
 	<div class="blue">
 	<div id="slatenav">
 	<ul>
-		<li><a href="operation_one.php">Operation1</a></li>
-		<li><a href="operation_two.php" class="current">Operation2</a></li>
-		<li><a href="operation_three.php" >Operation3</a></li>
-		<li><a href="operation_four.php" >Operation4</a></li>
-		<li><a href="ui.php" >UI</a></li>
+		<li><a href="operation_one.php" <?php if((basename($_SERVER['REQUEST_URI'])) == "operation_one.php"){ ?> class="current" <?php } else { ?> class="" <?php } ?>>Operation1</a></li>
+		<li><a href="operation_two.php" <?php if((basename($_SERVER['REQUEST_URI'])) == "operation_two.php"){ ?> class="current" <?php } else { ?> class="" <?php } ?>>Operation2</a></li>
+		<li><a href="operation_three.php" <?php if((basename($_SERVER['REQUEST_URI'])) == "operation_three.php"){ ?> class="current" <?php } else { ?> class="" <?php } ?>>Operation3</a></li>
+		<li><a href="operation_four.php" <?php if((basename($_SERVER['REQUEST_URI'])) == "operation_four.php"){ ?> class="current" <?php } else { ?> class="" <?php } ?>>Operation4</a></li>
 		</ul>
 		</div>
 	</div>

@@ -1,4 +1,4 @@
-
+<?php include('style.php'); ?>
 <?php
 include('library/mathoperation.class.php');
 
